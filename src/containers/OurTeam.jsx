@@ -1,8 +1,16 @@
 import React from 'react';
+import Hero from '../components/Hero';
+import Nav from '../components/Nav';
+import catJail from '../assets/images/cat-jail.jpg';
 
 function OurTeam(){
   return(
-    <h1>OurTeam Works</h1>
+    <div>
+      <Hero
+        heroImage={catJail}/>
+      <Nav/>
+
+    </div>
   );
 }
 
