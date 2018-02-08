@@ -169,7 +169,6 @@ Add embedded javascript and HTML structure to `template.ejs`:
     "webpack-dev-server": "^2.5.0"
   }
 }
-
 ```
 
 ### Add Rules to Linter Configuration File
