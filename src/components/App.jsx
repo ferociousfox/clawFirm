@@ -4,15 +4,17 @@ import Error404 from './Error404';
 
 function App(){
   return (
-    <Switch>
-      <Route exact path='/' component={Default} />
-      <Route component={Error404} />
-    </Switch>
+    <div>
+      <Switch>
+        <Route exact path='/' component={Default} />
+        <Route component={Error404} />
+      </Switch>
+    </div>
   );
 }
 
 //delete the following component definition before use
-function Default(){
+function Default(props){
   return(
     <h1>Default Component/App/Router Works!</h1>
   );
