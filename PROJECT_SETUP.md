@@ -13,19 +13,54 @@ node_modules
 build
 ```
 
-### Install All Modules
-1. Install necessary global packages
+### Install Global Modules
+Install necessary global packages
 ```
 $ npm i -g webpack@3.4.0 webpack-dev-server@2.5.0 eslint eslint-plugin-react
 ```
-2. Install dependencies
+
+### Add Scripts and Dependencies to Package.JSON File
 ```
-$ npm i react@15.5.4 react-dom@15.5.4 prop-types@15.6.0 react-router-dom@4.0.0 --save
+{
+  "name": "project-name-here",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "lint": "eslint src/** src/**/**; exit 0",
+    "lint-fix": "eslint src/** src/**/** --fix; exit 0"
+  },
+  "author": "\"\"",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.6.1",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.29.0",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.5.0"
+  }
+}
 ```
-3. Install dev dependencies
-```
-$ npm i --save-dev webpack@3.8.1 webpack-dev-server@2.5.0 babel-core@6.24.1 babel-loader@7.0.0 babel-preset-env@1.6.1 babel-preset-es2015@6.24.1 babel-preset-react@6.24.1 html-webpack-plugin@2.29.0 react-hot-loader@3.0.0-beta.7 eslint@4.17.0 eslint-loader@1.9.0 eslint-plugin-react@7.6.1 file-loader@1.1.6 url-loader@0.6.2
-```
+
+### Install Dependencies
+run `npm install` and fix yourself a drink
 
 ### Add Webpack Configuration File
 `$ touch webpack.config.js` in root directory and add the following contents:
@@ -131,46 +166,6 @@ Add embedded javascript and HTML structure to `template.ejs`:
 </html>
 ```
 
-### Add Scripts to Package.JSON File
-```
-{
-  "name": "project-name-here",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
-    "lint": "eslint src/** src/**/**; exit 0",
-    "lint-fix": "eslint src/** src/**/** --fix; exit 0"
-  },
-  "author": "\"\"",
-  "license": "ISC",
-  "dependencies": {
-    "prop-types": "^15.6.0",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-router-dom": "^4.0.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "eslint": "^4.17.0",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-react": "^7.6.1",
-    "file-loader": "^1.1.6",
-    "html-webpack-plugin": "^2.29.0",
-    "react-hot-loader": "^3.0.0-beta.7",
-    "url-loader": "^0.6.2",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.5.0"
-  }
-}
-```
-
 ### Add Rules to Linter Configuration File
 Initialize eslint with `$ eslint --init` and add the following rules to the eslintrc.json file
 ```
@@ -227,7 +222,7 @@ Initialize eslint with `$ eslint --init` and add the following rules to the esli
 }
 
 ```
-
+### You're all done!
 ## Step-by-Step Setup
 
 ### Initialize NPM in New Project
