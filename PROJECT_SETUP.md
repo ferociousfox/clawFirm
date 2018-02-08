@@ -5,6 +5,14 @@
 ### Initialize NPM in New project
 Run `npm init` in new project directory
 
+### Add `.gitignore` to Project
+Include the following entries:
+```
+.DS_STORE
+node_modules
+build
+```
+
 ### Install All Modules
 1. Install necessary global packages
 ```
