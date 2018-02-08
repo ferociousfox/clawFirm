@@ -24,14 +24,11 @@ $ npm i react@15.5.4 react-dom@15.5.4 prop-types@15.6.0 react-router-dom@4.0.0 -
 ```
 3. Install dev dependencies
 ```
-$ npm i --save-dev webpack@3.8.1 webpack-dev-server@2.5.0 babel-core@6.24.1
-babel-loader@7.0.0 babel-preset-env@1.6.1 babel-preset-es2015@6.24.1
-babel-preset-react@6.24.1 html-webpack-plugin@2.29.0
-react-hot-loader@3.0.0-beta.7 eslint@4.17.0 eslint-loader@1.9.0
-eslint-plugin-react@7.6.1 file-loader@1.1.6 url-loader@0.6.2
+$ npm i --save-dev webpack@3.8.1 webpack-dev-server@2.5.0 babel-core@6.24.1 babel-loader@7.0.0 babel-preset-env@1.6.1 babel-preset-es2015@6.24.1 babel-preset-react@6.24.1 html-webpack-plugin@2.29.0 react-hot-loader@3.0.0-beta.7 eslint@4.17.0 eslint-loader@1.9.0 eslint-plugin-react@7.6.1 file-loader@1.1.6 url-loader@0.6.2
 ```
 
 ### Add Webpack Configuration File
+`$ touch webpack.config.js` in root directory and add the following contents:
 ```
 const webpack = require('webpack');
 const { resolve } = require ('path');
