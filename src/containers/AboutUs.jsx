@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Nav from '../components/Nav';
+import Info from '../components/Info';
 import catJail from '../assets/images/cat-jail.jpg';
 
 function AboutUs(){
@@ -9,7 +10,7 @@ function AboutUs(){
       <Hero
         heroImage={catJail}/>
       <Nav/>
-
+      <Info/>
     </div>
   );
 }

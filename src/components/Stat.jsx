@@ -1,9 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Stat(){
+function Stat(props){
   return(
-    <h1>Stat works</h1>
+    <div className='card'>
+      <div className='title'>
+        <h1>{props.quantity}</h1>
+      </div>
+      <div className='copy'>
+        <p>{props.description}</p>
+      </div>
+    </div>
   );
 }
+
+Stat.propTypes = {
+  quantity: PropTypes.string,
+  description: PropTypes.string
+};
 
 export default Stat;
